@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form | Zaziza Tech</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Zaziza Tech | Customer Survey</h2>
+
+    <nav>
+      <button onclick="showScreen('survey')">Take Survey</button>
+      <button onclick="showScreen('results')">View Results</button>
+    </nav>
+
+    <!-- Survey Section -->
+    <div id="surveyScreen" class="form-section">
+      <h3>Personal Details</h3>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" name="contact" required />
+      </div>
+
+      <div class="form-group">
+        <label for="birthDate">Date of Birth</label>
+        <input type="date" id="birthDate" name="birthDate" required />
+      </div>
+
+      <hr />
+
+      <h3>Favourite Foods</h3>
+      <div class="checkbox-group form-group">
+        <label><input type="checkbox" value="Pizza" /> Pizza</label>
+        <label><input type="checkbox" value="Pasta" /> Pasta</label>
+        <label><input type="checkbox" value="Pap and Wors" /> Pap and Wors</label>
+        <label><input type="checkbox" value="Other" /> Other</label>
+      </div>
+
+      <hr />
+
+      <h3>Rate Your Interest (1 = Strongly Dislike, 5 = Love it)</h3>
+      <div class="form-group">
+        <label>How often do you eat out?</label>
+        <label><input type="radio" name="eatout" value="1" /> 1</label>
+        <label><input type="radio" name="eatout" value="2" /> 2</label>
+        <label><input type="radio" name="eatout" value="3" /> 3</label>
+        <label><input type="radio" name="eatout" value="4" /> 4</label>
+        <label><input type="radio" name="eatout" value="5" /> 5</label>
+      </div>
+
+      <div class="form-group">
+        <label>How often do you watch movies?</label>
+        <label><input type="radio" name="movies" value="1" /> 1</label>
+        <label><input type="radio" name="movies" value="2" /> 2</label>
+        <label><input type="radio" name="movies" value="3" /> 3</label>
+        <label><input type="radio" name="movies" value="4" /> 4</label>
+        <label><input type="radio" name="movies" value="5" /> 5</label>
+      </div>
+
+      <div class="form-group">
+        <label>How often do you watch TV?</label>
+        <label><input type="radio" name="tv" value="1" /> 1</label>
+        <label><input type="radio" name="tv" value="2" /> 2</label>
+        <label><input type="radio" name="tv" value="3" /> 3</label>
+        <label><input type="radio" name="tv" value="4" /> 4</label>
+        <label><input type="radio" name="tv" value="5" /> 5</label>
+      </div>
+
+      <div class="form-group">
+        <label>How often do you listen to the radio?</label>
+        <label><input type="radio" name="radio" value="1" /> 1</label>
+        <label><input type="radio" name="radio" value="2" /> 2</label>
+        <label><input type="radio" name="radio" value="3" /> 3</label>
+        <label><input type="radio" name="radio" value="4" /> 4</label>
+        <label><input type="radio" name="radio" value="5" /> 5</label>
+      </div>
+
+      <button id="submitButton" type="button" onclick="submitSurvey()">Submit</button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="resultsScreen" class="form-section" style="display: none;">
+      <h3>Survey Results</h3>
+      <table>
+        <caption>Summary</caption>
+        <tbody>
+          <tr>
+            <th>Total Surveys</th>
+            <td id="totalSurveys">--</td>
+          </tr>
+          <tr>
+            <th>Average Age</th>
+            <td id="averageAge">--</td>
+          </tr>
+          <tr>
+            <th>Oldest Person</th>
+            <td id="oldestAge">--</td>
+          </tr>
+          <tr>
+            <th>Youngest Person</th>
+            <td id="youngestAge">--</td>
+          </tr>
+          <tr>
+            <th>Percentage Who Like Pizza</th>
+            <td id="pizzaPercentage">--</td>
+          </tr>
+          <tr>
+            <th>Average Eat Out Rating</th>
+            <td id="eatOutAvg">--</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
